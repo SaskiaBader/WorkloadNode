@@ -1,0 +1,21 @@
+html
+  head
+    title Entwickler blockieren
+    style
+      include style.css
+  body
+    h1 Entwickler #{devId} blockieren
+    div#content
+      form(method="post",action="/blockieren/pruefen")
+        input(type="hidden",name="dev",value="#{devId}")
+        div.forminput
+          label(for="von") Von
+          input(type="text",name="von")
+        div.forminput
+          label(for="bis") Bis
+          input(type="text",name="bis")
+        div.forminput
+          label(for="bloecke") Anzahl der Blöcke
+          input(type="text",name="bloecke")
+        div.forminput
+          input(type="submit" value="Auf Verfügbarkeit prüfen")
